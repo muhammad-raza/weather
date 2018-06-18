@@ -1,0 +1,50 @@
+.whole_thing{
+	width:100%;
+	height:100%;
+	float:left;
+		overflow:hidden;
+
+	
+	
+}
+#date_div{
+	
+	width:10%;
+	height:50px;
+	
+	
+}
+#location{
+	width:15%;
+	height:50px;
+	
+	
+	
+}
+.day1{
+	float:left;
+	overflow:hidden;
+	width:25%;
+	height:280px;
+	
+}
+
+.day2{
+	float:left;
+	width:25%;
+	height:280px;
+	
+	
+}
+.day3{
+	float:left;
+	width:25%;
+	height:280px;
+}
+
+ul{
+	list-style-type: none; 
+}
+
+
+
