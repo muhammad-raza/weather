@@ -1,14 +1,19 @@
 $(document).ready(function(){
 	$('#search_here').click(function(){
-			var someDate=new Date();
+		/*	var someDate=new Date();
 			var dd = someDate.getDate()+2;
 			var mm = someDate.getMonth()+1;
 			var y = someDate.getFullYear();
 			var someFormattedDate = dd + '/'+ mm + '/'+ y;
 			$('.day3').html(someFormattedDate);	
 		
-		
-		
+		console.log(someDate); */
+									var date1=new Date();
+									var day=date1.getDate()+2;
+									var month=date1.getMonth();
+									var year=date1.getFullYear();
+									var monthNames = [ "January", "February", "March", "April", "May", "June",
+									"July", "August", "September", "October", "November", "December" ];
 		
 	
 	var text_value=$('#text_box').val();
@@ -30,13 +35,24 @@ $.ajax({
 								}
 								else if(index===1){
 								$('.day2').html('<a href="#">Tomorrow</a></br>'+weather_here);  
-								
 								}
 								else if(index===2){
-								$('.day3').html(someFormattedDate+weather_here);    
 									
-									
+								$('.day3').html(day+" "+monthNames[month]+" "+year+weather_here);    
 								}
+								else if(index===3){
+								
+								$('.day4').html((day+1)+" "+monthNames[month]+" "+year+weather_here);    
+								}
+								else if(index===4){
+								$('.day5').html((day+2)+" "+monthNames[month]+" "+year+weather_here);    
+								}
+								
+								
+								
+								
+								
+								
 		}); 
 		}//end of success
 			});

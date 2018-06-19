@@ -1,4 +1,12 @@
 $(document).ready(function(){
+									var date1=new Date();
+									var day=date1.getDate()+2;
+									var month=date1.getMonth();
+									var year=date1.getFullYear();
+									var monthNames = [ "January", "February", "March", "April", "May", "June",
+									"July", "August", "September", "October", "November", "December" ];
+	
+	
 var get_current_location;
 var get_current_longitude;
 var get_current_latitude;
@@ -30,6 +38,9 @@ function showPosition(position){
 		 console.log(location_data);
 		 $.each(location_data,function(ind,val){
 			 if(ind===0){
+				 var title_value=val.title;
+				 		$('#location').html('<h1><a href="#">'+title_value+'</a></h1>');
+
 			 var woeid_here=val.woeid; }
 			 console.log(woeid_here);
 				
@@ -47,8 +58,19 @@ function showPosition(position){
 								
 								}
 								else if(index===2){
-								$('.day3').html(print_weather);    
+								$('.day3').html(day+" "+monthNames[month]+" "+year+print_weather);    
 									}
+									else if(index===3){
+								$('.day4').html((day+1)+" "+monthNames[month]+" "+year+print_weather);    
+								}
+								else if(index===4){
+								$('.day5').html((day+2)+" "+monthNames[month]+" "+year+print_weather);    
+								}
+									
+									
+									
+									
+									
 								});	
 							}
 							}); //end of second ajax

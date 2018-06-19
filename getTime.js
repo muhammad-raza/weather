@@ -1,5 +1,5 @@
 $(document).ready(function(){
-											
+					gettime();						
 
 		function gettime(){
 			var date_here= new Date();
@@ -16,7 +16,7 @@ $(document).ready(function(){
 			$('#date_div').html(y+":"+x+ampm);
 			}
 		$('#search_here').click(function(){
-				gettime();
+				
 		var text_value=$('#text_box').val();
 
 		$('#location').html('<h1><a href="#">'+text_value+'</a></h1>');
